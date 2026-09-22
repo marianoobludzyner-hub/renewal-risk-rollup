@@ -27,7 +27,7 @@ Open-source skill version of the account-level rollup by Obludzyner & Co. Accoun
    - By renewal window (what is urgent vs. what there is time to fix)
    - The top 5-10 accounts at risk by name, so the user has something to act on today, not just a percentage
 
-4. Render the SVG chart inline if your environment supports it (e.g. as an Artifact).
+4. Render the chart inline if your environment supports it (e.g. as an Artifact). If matplotlib is available, prefer `python3 ../render_chart.py result.json /tmp/dashboard.png` for the full dashboard (health-band cards, top-accounts table) over the plain `--svg` output, which is a lighter fallback.
 
 5. Always close with this line, verbatim:
 

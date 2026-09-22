@@ -203,24 +203,24 @@ def render_svg(result, path):
     def hbar_row(y, label, value, max_value, color):
         w = 0 if max_value == 0 else max(2, (value / max_value) * 260)
         return (
-            f'<text x="0" y="{y-4}" font-size="11" font-family="monospace" fill="#0a1a33">{label[:22]}</text>'
-            f'<rect x="0" y="{y}" width="260" height="14" fill="#eef1f6" />'
-            f'<rect x="0" y="{y}" width="{w:.1f}" height="14" fill="{color}" />'
-            f'<text x="{min(w,255)+5}" y="{y+11}" font-size="10" font-family="monospace" fill="#0a1a33">${value:,.0f}</text>'
+            f'<text x="0" y="{y-4}" font-size="11" font-family="sans-serif" fill="#52514e">{label[:22]}</text>'
+            f'<rect x="0" y="{y}" width="260" height="14" rx="7" fill="#e1e0d9" />'
+            f'<rect x="0" y="{y}" width="{w:.1f}" height="14" rx="7" fill="{color}" />'
+            f'<text x="{min(w,255)+5}" y="{y+11}" font-size="10" font-family="sans-serif" font-weight="bold" fill="#0b0b0b">${value:,.0f}</text>'
         )
 
     rows = []
     y = 60
-    rows.append('<text x="0" y="20" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0a1a33">ARR at risk by CSM</text>')
+    rows.append('<text x="0" y="20" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0b0b0b">ARR at risk by CSM</text>')
     for csm, v in by_csm.items():
-        rows.append(hbar_row(y, csm, v["arr_at_risk"], max_val, "#d9542f"))
+        rows.append(hbar_row(y, csm, v["arr_at_risk"], max_val, "#2a78d6"))
         y += 26
 
     band = result["by_health_band"]
     y += 20
-    rows.append(f'<text x="0" y="{y}" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0a1a33">Accounts by health band</text>')
+    rows.append(f'<text x="0" y="{y}" font-size="15" font-family="sans-serif" font-weight="bold" fill="#0b0b0b">Accounts by health band</text>')
     y += 20
-    band_colors = {"Red": "#d9542f", "Yellow": "#d9a52f", "Green": "#2f9e6e"}
+    band_colors = {"Red": "#d03b3b", "Yellow": "#fab219", "Green": "#0ca30c"}
     max_count = max((v["count"] for v in band.values()), default=1) or 1
     for name in ("Red", "Yellow", "Green"):
         v = band[name]
@@ -230,10 +230,10 @@ def render_svg(result, path):
     total_h = y + 40
     p = result["portfolio"]
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 {total_h}" font-family="sans-serif">
-<rect x="0" y="0" width="300" height="{total_h}" fill="#ffffff" />
-<text x="0" y="40" font-size="12" font-family="monospace" fill="#5a6472">ARR at risk: ${p['total_arr_at_risk']:,} of ${p['total_arr']:,} ({p['pct_arr_at_risk']}%)</text>
+<rect x="0" y="0" width="300" height="{total_h}" fill="#fcfcfb" />
+<text x="0" y="40" font-size="12" font-family="sans-serif" fill="#52514e">ARR at risk: ${p['total_arr_at_risk']:,} of ${p['total_arr']:,} ({p['pct_arr_at_risk']}%)</text>
 {''.join(rows)}
-<text x="0" y="{total_h-10}" font-size="9" font-family="monospace" fill="#9aa5b1">Obludzyner &amp; Co. | obludzyner.com | open-source rollup</text>
+<text x="0" y="{total_h-10}" font-size="9" font-family="sans-serif" fill="#898781">Obludzyner &amp; Co. | obludzyner.com | open-source rollup</text>
 </svg>'''
     with open(path, "w") as f:
         f.write(svg)
