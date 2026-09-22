@@ -1,0 +1,47 @@
+================================================================
+RENEWAL RISK & ARR-AT-RISK ROLLUP
+================================================================
+Portfolio: 40 accounts, $5,675,296 total ARR
+ARR at risk (risk-weighted): $2,388,398 (42.1% of portfolio)
+
+BY HEALTH BAND
+  Red       15 accounts   $   1,409,759 ARR
+  Yellow    18 accounts   $   2,796,111 ARR
+  Green      7 accounts   $   1,469,426 ARR
+
+BY CSM (sorted by ARR at risk)
+  Tomer L.             $   1,105,312 at risk   (16 accounts, $2,758,925 total)
+  Priya S.             $     856,046 at risk   (8 accounts, $1,520,161 total)
+  Dana K.              $     268,989 at risk   (8 accounts, $1,038,959 total)
+  Marco P.             $     158,051 at risk   (8 accounts, $357,251 total)
+
+BY SEGMENT (sorted by ARR at risk)
+  Enterprise           $   1,549,475 at risk   (14 accounts, $4,295,361 total)
+  Mid-Market           $     634,371 at risk   (14 accounts, $1,131,219 total)
+  SMB                  $     204,552 at risk   (12 accounts, $248,716 total)
+
+BY RENEWAL WINDOW
+  <= 30 days      7 accounts   $     339,464 at risk
+  31-60 days      5 accounts   $     280,627 at risk
+  61-90 days      6 accounts   $     102,221 at risk
+  > 90 days      22 accounts   $   1,666,086 at risk
+
+TOP 10 ACCOUNTS AT RISK
+  Account-023              Red     health= 22  renews in  192d  $   410,444 at risk  (CSM: Priya S.)
+  Account-010              Red     health= 15  renews in  200d  $   358,393 at risk  (CSM: Tomer L.)
+  Account-036              Yellow  health= 60  renews in  205d  $   161,742 at risk  (CSM: Tomer L.)
+  Account-021              Yellow  health= 62  renews in  128d  $   149,169 at risk  (CSM: Priya S.)
+  Account-030              Yellow  health= 48  renews in   -3d  $   136,609 at risk  (CSM: Priya S.)
+  Account-001              Red     health= 42  renews in   44d  $   126,682 at risk  (CSM: Dana K.)
+  Account-013              Yellow  health= 66  renews in   49d  $    92,862 at risk  (CSM: Dana K.)
+  Account-035              Red     health= 41  renews in  126d  $    92,478 at risk  (CSM: Tomer L.)
+  Account-007              Red     health= 42  renews in  228d  $    92,114 at risk  (CSM: Tomer L.)
+  Account-018              Yellow  health= 54  renews in   19d  $    87,748 at risk  (CSM: Tomer L.)
+================================================================
+This is the open-source, directional version of the account-level
+rollup used inside a SHIFT Method engagement. Health bands and risk
+weights here are illustrative -- adjust RED_MAX / YELLOW_MAX / RISK_WEIGHTS
+in rollup.py to match your own scorecard.
+For a Revenue Audit built on your real definitions and data:
+  https://obludzyner.com
+================================================================

@@ -1,0 +1,181 @@
+{
+  "portfolio": {
+    "accounts": 40,
+    "total_arr": 5675296,
+    "total_arr_at_risk": 2388398,
+    "pct_arr_at_risk": 42.1
+  },
+  "by_health_band": {
+    "Red": {
+      "count": 15,
+      "arr": 1409759
+    },
+    "Yellow": {
+      "count": 18,
+      "arr": 2796111
+    },
+    "Green": {
+      "count": 7,
+      "arr": 1469426
+    }
+  },
+  "by_csm": {
+    "Tomer L.": {
+      "count": 16,
+      "arr_at_risk": 1105312,
+      "total_arr": 2758925
+    },
+    "Priya S.": {
+      "count": 8,
+      "arr_at_risk": 856046,
+      "total_arr": 1520161
+    },
+    "Dana K.": {
+      "count": 8,
+      "arr_at_risk": 268989,
+      "total_arr": 1038959
+    },
+    "Marco P.": {
+      "count": 8,
+      "arr_at_risk": 158051,
+      "total_arr": 357251
+    }
+  },
+  "by_segment": {
+    "Enterprise": {
+      "count": 14,
+      "arr_at_risk": 1549475,
+      "total_arr": 4295361
+    },
+    "Mid-Market": {
+      "count": 14,
+      "arr_at_risk": 634371,
+      "total_arr": 1131219
+    },
+    "SMB": {
+      "count": 12,
+      "arr_at_risk": 204552,
+      "total_arr": 248716
+    }
+  },
+  "by_renewal_window": {
+    "<= 30 days": {
+      "count": 7,
+      "arr_at_risk": 339464
+    },
+    "31-60 days": {
+      "count": 5,
+      "arr_at_risk": 280627
+    },
+    "61-90 days": {
+      "count": 6,
+      "arr_at_risk": 102221
+    },
+    "> 90 days": {
+      "count": 22,
+      "arr_at_risk": 1666086
+    }
+  },
+  "top_accounts_at_risk": [
+    {
+      "account_name": "Account-023",
+      "csm": "Priya S.",
+      "segment": "Enterprise",
+      "arr": 410444,
+      "health_score": 22.5,
+      "band": "Red",
+      "days_to_renewal": 192,
+      "risk_weighted_arr": 410444
+    },
+    {
+      "account_name": "Account-010",
+      "csm": "Tomer L.",
+      "segment": "Enterprise",
+      "arr": 358393,
+      "health_score": 14.9,
+      "band": "Red",
+      "days_to_renewal": 200,
+      "risk_weighted_arr": 358393
+    },
+    {
+      "account_name": "Account-036",
+      "csm": "Tomer L.",
+      "segment": "Enterprise",
+      "arr": 462121,
+      "health_score": 60.2,
+      "band": "Yellow",
+      "days_to_renewal": 205,
+      "risk_weighted_arr": 161742
+    },
+    {
+      "account_name": "Account-021",
+      "csm": "Priya S.",
+      "segment": "Enterprise",
+      "arr": 426197,
+      "health_score": 61.7,
+      "band": "Yellow",
+      "days_to_renewal": 128,
+      "risk_weighted_arr": 149169
+    },
+    {
+      "account_name": "Account-030",
+      "csm": "Priya S.",
+      "segment": "Enterprise",
+      "arr": 390312,
+      "health_score": 48.2,
+      "band": "Yellow",
+      "days_to_renewal": -3,
+      "risk_weighted_arr": 136609
+    },
+    {
+      "account_name": "Account-001",
+      "csm": "Dana K.",
+      "segment": "Mid-Market",
+      "arr": 126682,
+      "health_score": 41.8,
+      "band": "Red",
+      "days_to_renewal": 44,
+      "risk_weighted_arr": 126682
+    },
+    {
+      "account_name": "Account-013",
+      "csm": "Dana K.",
+      "segment": "Enterprise",
+      "arr": 265321,
+      "health_score": 66.2,
+      "band": "Yellow",
+      "days_to_renewal": 49,
+      "risk_weighted_arr": 92862
+    },
+    {
+      "account_name": "Account-035",
+      "csm": "Tomer L.",
+      "segment": "Mid-Market",
+      "arr": 92478,
+      "health_score": 41.0,
+      "band": "Red",
+      "days_to_renewal": 126,
+      "risk_weighted_arr": 92478
+    },
+    {
+      "account_name": "Account-007",
+      "csm": "Tomer L.",
+      "segment": "Mid-Market",
+      "arr": 92114,
+      "health_score": 41.5,
+      "band": "Red",
+      "days_to_renewal": 228,
+      "risk_weighted_arr": 92114
+    },
+    {
+      "account_name": "Account-018",
+      "csm": "Tomer L.",
+      "segment": "Enterprise",
+      "arr": 250710,
+      "health_score": 53.9,
+      "band": "Yellow",
+      "days_to_renewal": 19,
+      "risk_weighted_arr": 87748
+    }
+  ]
+}
