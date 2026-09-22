@@ -58,7 +58,7 @@ See [`gpt/CUSTOM_GPT_INSTRUCTIONS.md`](gpt/CUSTOM_GPT_INSTRUCTIONS.md) -- paste 
 
 ## Where this fits in SHIFT
 
-This is also "S", one altitude deeper: the [SHIFT Method](https://obludzyner.com/#how)'s Revenue Audit works at the account level, not just the company level. Proof: at **Clicktale**, the audit is what found the 60% churn leak before anything else moved -- concentrated in specific accounts and specific patterns, the same shape of finding this rollup is built to surface.
+This is also "S", one altitude deeper: the [SHIFT Method](https://obludzyner.com/#how)'s Revenue Audit works at the account level, not just the company level. Proof: at **Clicktale**, the audit surfaced that 60% of revenue up for renewal that quarter was concentrated in specific accounts and specific patterns, not evenly spread. 7 months later: 95% GRR, 115% NRR across a $10M portfolio -- the same shape of finding this rollup is built to surface.
 
 ## What this is not
 
