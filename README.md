@@ -4,6 +4,12 @@ A zero-dependency tool that turns a flat CSV of accounts into a leadership-ready
 
 This is the account-level companion to [nrr-leak-diagnostic](https://github.com/marianoobludzyner-hub/nrr-leak-diagnostic). That tool estimates leak at the company level from 7 questions. This one rolls the same question up from your actual portfolio: which accounts, whose book, which renewal window.
 
+<p align="center">
+  <img src="examples/sample_result.svg" alt="Sample output: ARR at risk by CSM and by health band" width="360">
+</p>
+
+<p align="center"><sub>Real output from a 40-account synthetic portfolio - not a mockup. See <a href="examples/sample_result.txt">the full text report</a>.</sub></p>
+
 ## Why this project
 
 "We think we have some at-risk accounts" is not a plan. "$1.5M of our Enterprise segment is at risk, concentrated in Tomer's book, and $340K of it renews in the next 30 days" is a plan. This tool exists to turn a CSV export from your CRM/CS platform into the second sentence, in one command, with the method fully visible.
@@ -49,6 +55,10 @@ See [`gpt/CUSTOM_GPT_INSTRUCTIONS.md`](gpt/CUSTOM_GPT_INSTRUCTIONS.md) -- paste 
 - Health bands: Red < 45, Yellow 45-69, Green >= 70. These are directional, not your scorecard -- change `RED_MAX` / `YELLOW_MAX` in `rollup.py` to match your own definitions.
 - Risk weights: Red counts 100% of ARR as at risk, Yellow 35%, Green 0%. Change `RISK_WEIGHTS` in `rollup.py` if your own churn-by-band history says otherwise -- this is the single most important number to calibrate against your real data.
 - This is intentionally simple: one health score per account, one weight per band. A real Revenue Audit builds the health score itself from your actual usage, support, and billing signals, and calibrates the weights against your own historical churn, the way [nrr-leak-diagnostic](https://github.com/marianoobludzyner-hub/nrr-leak-diagnostic)'s baseline (5% churn / 20% expansion) was calibrated for B2B SaaS up to $10M ARR.
+
+## Where this fits in SHIFT
+
+This is also "S", one altitude deeper: the [SHIFT Method](https://obludzyner.com/#how)'s Revenue Audit works at the account level, not just the company level. Proof: at **Clicktale**, the audit is what found the 60% churn leak before anything else moved -- concentrated in specific accounts and specific patterns, the same shape of finding this rollup is built to surface.
 
 ## What this is not
 
